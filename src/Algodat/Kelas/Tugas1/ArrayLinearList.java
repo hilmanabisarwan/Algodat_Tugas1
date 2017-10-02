@@ -155,13 +155,9 @@ public class ArrayLinearList implements LinearList{
             element[--size]=null;
     }
     
-    /**
-     *
-     * @return
-     * @throws CloneNotSupportedException
-     */
-    @Override
-    public Object clone() throws CloneNotSupportedException{
-        return super.clone();
+    public Object clone(Object [] array){
+        array = new Object[size];
+        array = element.clone();
+        return toString();
     }
 }
