@@ -137,4 +137,31 @@ public class ArrayLinearList implements LinearList{
         }
         return size;
     }
+    
+    
+    public void removeRange(int fromIndex, int toIndex){
+        if(fromIndex < 0)
+            fromIndex = 0;
+        if(toIndex > size)
+            toIndex = size;
+        if(fromIndex >= toIndex)
+            return;
+        
+        int A = size - toIndex;
+        System.arraycopy(element, toIndex, element, fromIndex, A);
+        
+        int newSize = fromIndex + A;
+        while(size != newSize)
+            element[--size]=null;
+    }
+    
+    /**
+     *
+     * @return
+     * @throws CloneNotSupportedException
+     */
+    @Override
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
 }
