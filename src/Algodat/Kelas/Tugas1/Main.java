@@ -40,6 +40,10 @@ public class Main {
         System.out.println("Jumlah Elemen Sekarang\t: " +all.size);
         System.out.println("Isi Array Sekarang\t: " +all.toString());
         
+        //Soal No. 9
+        all.removeRange(0, 2);
+        System.out.println("\nIsi Array : "+all.toString());
+        
         //Soal No. 5
         all.trimToSize();
         System.out.print("\n");
